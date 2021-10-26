@@ -1,0 +1,142 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>[Paper ID: 883] CausalCity</title>
+
+  <link rel="stylesheet" href="template.css">
+</head>
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;">CausalCity: Complex Simulations with Agency for Causal Discovery and Reasoning</span></center><br/>
+
+  <table align=center width=600px style="padding-top: 0px; padding-bottom: 20px;">
+    <tr>
+      <td align=center width=600px>
+        <center>
+          <span style="font-size: 22px">Anonymous NeurIPS Submission</span>
+        </center>
+      </td>
+    </tr>
+  </table>
+
+  <table align=center width=600px>
+    <tr>
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="." target="_blank">[Home]</a>
+          </span>
+        </center>
+      </td>
+      
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="./CausalCity.pdf" target="_blank">[Paper]</a>
+          </span>
+        </center>
+      </td>
+      
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="./simulation.html" target="_blank">[Simulation]</a>
+          </span>
+        </center>
+      </td>
+      
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="./dataset.html" target="_blank">[Dataset]</a>
+          </span>
+        </center>
+      </td>
+      
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="https://github.com/causalcity/causalcity.github.io/tree/main/code" target="_blank">[Code]</a>
+          </span>
+        </center>
+      </td>
+
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="./examples.html" target="_blank">[Examples]</a>
+          </span>
+        </center>
+      </td>
+      
+    </tr>
+  </table>
+
+  <br>
+
+  <table align=center width=800px>
+    <center><img src="Banner.PNG" width=800px /></center>
+  </table>
+
+  <br>
+
+  <center>
+    <h1>Simulation Download</h1>
+  </center>
+  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+      The compiled binary of the simulation is available here (size - 800MB): <a href="https://simulation.blob.core.windows.net/publicrelease/CausalCityLinuxBinaries.zip">DOWNLOAD</a>
+  </div>
+  
+  <br>
+
+  <center>
+    <h1>Prerequisites</h1>
+  </center>
+  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+      The python API for <a href="https://pypi.org/project/airsim/">AirSim</a> provides the binding for launching the scenarios and logging data.  Our simulation uses a custom version of the python bindings that can be <a href="https://simulation.blob.core.windows.net/publicrelease/PythonClient.zip">downloaded here</a>. Download and unzip this file and then install the airsim library as below.
+  </div>
+  
+  <br>
+
+  
+  <center>
+    <h1>Example</h1>
+  </center>
+  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+      Install airsim python bindings:
+      <br><br>
+    <code> &gt;&gt;&gt; python setup.py install </code>
+      <br><br>
+      Launch the simulation and a python terminal:
+      <br><br>
+    <code> &gt;&gt;&gt; import airsim </code>
+      <br><br>
+      Set up car client:
+      <br><br>
+    <code> &gt;&gt;&gt; c = airsim.client.CarClient() </code>
+      <br><br>
+      Run a scenario:
+      <br><br>
+    <code> &gt;&gt;&gt; c.simRunConsoleCommand('ce RunScenario Scenario_1') </code>
+      <br><br>
+      Get RGB image and segmentation mask:
+      <br><br>
+      <code> &gt;&gt;&gt; segResponse = c.simGetImages([airsim.ImageRequest("0", airsim.ImageType.Scene, False, False),
+        airsim.ImageRequest("0", airsim.ImageType.Segmentation, False, False)]) </code>
+  </div>
+  <br>
+   <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+      A more detailed script used to generate the scenarios used in our submission can be found <a href="https://github.com/causalcity/causalcity.github.io/tree/main/code/runScenariosICML.py">here</a>.
+  </div>
+ 
+  
+  <br>
+
+</body>
+
+</html>
