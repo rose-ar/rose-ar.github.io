@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>[Paper ID: 883] CausalCity</title>
+  <title>[Paper ID: 5742] ROAR</title>
 
   <link rel="stylesheet" href="template.css">
 </head>
@@ -11,13 +11,13 @@
 <body>
   <br>
 
-  <center><span style="font-size: 44px; font-weight: bold;">CausalCity: Complex Simulations with Agency for Causal Discovery and Reasoning</span></center><br/>
+  <center><span style="font-size: 44px; font-weight: bold;">ROAR: A large-scale analysis on robustness in action recognition</span></center><br/>
 
   <table align=center width=600px style="padding-top: 0px; padding-bottom: 20px;">
-    <tr>      
+    <tr>
       <td align=center width=600px>
         <center>
-          <span style="font-size: 22px">Anonymous NeurIPS Submission</span>
+          <span style="font-size: 22px">Anonymous CVPR Submission</span>
         </center>
       </td>
     </tr>
@@ -28,7 +28,7 @@
       <td align=center width=150px>
         <center>
           <span style="font-size: 22px">
-            <a href="." target="_blank">[Home]</a>
+            <a href="." target="_top">[Home]</a>
           </span>
         </center>
       </td>
@@ -36,32 +36,7 @@
       <td align=center width=150px>
         <center>
           <span style="font-size: 22px">
-            <a href="./CausalCity.pdf" target="_blank">[Paper]</a>
-          </span>
-        </center>
-      </td>
-      
-      
-      <td align=center width=150px>
-        <center>
-          <span style="font-size: 22px">
-            <a href="./simulation.html" target="_blank">[Simulation]</a>
-          </span>
-        </center>
-      </td>
-      
-      <td align=center width=150px>
-        <center>
-          <span style="font-size: 22px">
-            <a href="./dataset.html" target="_blank">[Dataset]</a>
-          </span>
-        </center>
-      </td>
-      
-      <td align=center width=150px>
-        <center>
-          <span style="font-size: 22px">
-            <a href="https://github.com/causalcity/causalcity.github.io/tree/main/code" target="_blank">[Code]</a>
+            <a href="." target="_top">[Paper]</a>
           </span>
         </center>
       </td>
@@ -69,7 +44,23 @@
       <td align=center width=150px>
         <center>
           <span style="font-size: 22px">
-            <a href="./examples.html" target="_blank">[Examples]</a>
+            <a href="./dataset.html" target="_top">[Dataset]</a>
+          </span>
+        </center>
+      </td>
+      
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="https://github.com" target="_top">[Code]</a>
+          </span>
+        </center>
+      </td>
+
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="./examples.html" target="_top">[Examples]</a>
           </span>
         </center>
       </td>
@@ -79,46 +70,17 @@
 
   <br>
 
+  <table align=center width=800px>
+    <center><img src="./images/cam_noise.png" width=800px /></center>
+  </table>
+
+  <br>
+
   <center>
     <h1>Examples</h1>
   </center>
  
-  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-    To illustrate the potential of our simulation environment, we generate data and evaluate state-of-the-art causal reasoning approaches on it. To introduce causal relationships between the vehicles we create "links" (or edges in the causal graph). The edges are defined as a "leader-follower" relationship in which two cars are given the same set of actions but one starts ahead of the other. In each scenario we create pairs (e.g., three pairs of six cars = three edges) of "leader-followers"; in the causal reasoning language, the leader vehicles are the interventions and the follower vehicles are the outcomes; the former causes the latter to move in certain ways. The remaining six vehicles are not causally connected to any other vehicle. This is a sparse graph (only three edges) but that is reasonable as causal relationships in the real life are often sparse.
-  </div>
-    <br>
-  <table align=center width=900px>
-    <center><img src="scenario_2.gif" width=300px /> <img src="scenario_3.gif" width=300px /> <img src="scenario_4.gif" width=300px /></center>
-  </table>
-  <table align=center width=900px>
-    <center><img src="scenario_2_seg.gif" width=300px /> <img src="scenario_3_seg.gif" width=300px /> <img src="scenario_4_seg.gif" width=300px /></center>
-  </table>
-  <br>
-  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-    While we tackle the problem from a bird's eye view - assuming we have access to the positions of all vehicles in the scene our simulation enables flexible recording from any perspective (e.g., third person or first person, static or moving camera).
-  </div>
-    <br>
-  <table align=center width=900px>
-    <center><img src="scenario_1_streetlevel.gif" width=300px /> <img src="scenario_2_streetlevel.gif" width=300px /> <img src="scenario_3_streetlevel.gif" width=300px /></center>
-  </table>
-  <table align=center width=900px>
-    <center><img src="scenario_1_seg_streetlevel.gif" width=300px /> <img src="scenario_2_seg_streetlevel.gif" width=300px /> <img src="scenario_3_seg_streetlevel.gif" width=300px /></center>
-  </table>
-  <br>
-  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-    First person:
-  </div>
-    <br>
-  <table align=center width=900px>
-    <center><img src="scenario_1_firstperson.gif" width=300px /> <img src="scenario_2_firstperson.gif" width=300px /> <img src="scenario_3_firstperson.gif" width=300px /></center>
-  </table>
-  <table align=center width=900px>
-    <center><img src="scenario_1_seg_firstperson.gif" width=300px /> <img src="scenario_2_seg_firstperson.gif" width=300px /> <img src="scenario_3_seg_firstperson.gif" width=300px /></center>
-  </table>
  
-
-  <br>
-  
   <br>
 
 </body>
