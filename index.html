@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>[Paper ID: 883] CausalCity</title>
+  <title>[Paper ID: 5742] ROAR</title>
 
   <link rel="stylesheet" href="template.css">
 </head>
@@ -11,13 +11,13 @@
 <body>
   <br>
 
-  <center><span style="font-size: 44px; font-weight: bold;">CausalCity: Complex Simulations with Agency for Causal Discovery and Reasoning</span></center><br/>
+  <center><span style="font-size: 44px; font-weight: bold;">RoAR: A large-scale analysis on robustness in action recognition</span></center><br/>
 
   <table align=center width=600px style="padding-top: 0px; padding-bottom: 20px;">
     <tr>
       <td align=center width=600px>
         <center>
-          <span style="font-size: 22px">Anonymous NeurIPS Submission</span>
+          <span style="font-size: 22px">Anonymous CVPR Submission</span>
         </center>
       </td>
     </tr>
@@ -36,31 +36,7 @@
       <td align=center width=150px>
         <center>
           <span style="font-size: 22px">
-            <a href="./CausalCity.pdf" target="_blank">[Paper]</a>
-          </span>
-        </center>
-      </td>
-      
-      <td align=center width=150px>
-        <center>
-          <span style="font-size: 22px">
-            <a href="./simulation.html" target="_blank">[Simulation]</a>
-          </span>
-        </center>
-      </td>
-      
-      <td align=center width=150px>
-        <center>
-          <span style="font-size: 22px">
-            <a href="./dataset.html" target="_blank">[Dataset]</a>
-          </span>
-        </center>
-      </td>
-      
-      <td align=center width=150px>
-        <center>
-          <span style="font-size: 22px">
-            <a href="https://github.com/causalcity/causalcity.github.io/tree/main/code" target="_blank">[Code]</a>
+            <a href="." target="_top">[Paper]</a>
           </span>
         </center>
       </td>
@@ -68,7 +44,23 @@
       <td align=center width=150px>
         <center>
           <span style="font-size: 22px">
-            <a href="./examples.html" target="_blank">[Examples]</a>
+            <a href="./dataset.html" target="_top">[Dataset]</a>
+          </span>
+        </center>
+      </td>
+      
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="https://github.com" target="_top">[Code]</a>
+          </span>
+        </center>
+      </td>
+
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="./examples.html" target="_top">[Examples]</a>
           </span>
         </center>
       </td>
@@ -88,7 +80,12 @@
     <h1>Abstract</h1>
   </center>
   <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-    The ability to perform causal and counterfactual reasoning are central properties of human intelligence. Decision-making systems that can perform these types of reasoning have the potential to be more generalizable and interpretable. Simulations have helped advance the state-of-the-art in this domain, by providing the ability to systematically vary parameters (e.g., confounders) and generate examples of the outcomes in the case of counterfactual scenarios. However, simulating complex temporal causal events, such as those that existing in driving and vehicle navigation, is challenging. To help address this, we present a high-fidelity simulation environment that is designed for developing algorithms for causal discovery and counterfactual reasoning in this safety-critical context. A core component of our work is to introduce agency, such that it is simple to define and create complex scenarios using high-level definitions. The vehicles then operate with agency to complete these objectives, meaning low-level behaviors need only be controlled if necessary. We perform experiments with three state-of-the-art methods to create baselines and highlight the affordances of this environment. Finally, we highlight challenges and opportunities for future work.
+   In recent years, a number of approaches based on
+3D convolutional neural networks (CNN) or Transformer based networks have emerged for
+video action recognition, achieving state-of-the-art results
+on several large-scale benchmark datasets.
+In this paper,
+we carry out in-depth comparative analysis to better understand the differences between these approaches and their robustness. Robustness has been a research topic due to its importance in real-world applications. However, most of the effort is directed towards non-sequential image data. World is inherently sequential, e.g., human beings learn different skills sequentially in a continual manner, the sequential data like video and language are the natural forms of the input to the vision systems that operate in the real world. For example perception, activity recognition, conversational systems and commonsense reasoning about physical world require sequential image and language data as input. Therefore studying robustness in sequential data is an important step towards developing reliable systems that can be deployed in the real world.
   </div>
   
   <br>
@@ -120,34 +117,6 @@
     <center><img src="random.gif" width=800px /></center>
   </table>
 
-  <br><hr>
-
-  <center>
-    <h1>CausalCity</h1>
-  </center>
-  <table align=center width=800px>
-    <center><img src="Teaser.png" width=800px /></center>
-  </table>
-  <br>
-  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-    CausalCity is a high-fidelity simulation environment, with AI agent controls for creating scenarios for causal and counterfactual reasoning. This environment reflects the real-world, safety critical scenario of driving. We want a simulation environment that enables controllable scenario generation that can be used for temporal and causal reasoning. This environment allows us to create complex scenarios including different types of confounders with relatively little effort. Within CausalCity you can introduce any number of vehicles, each of which is controlled at a high-level and has basic AI agency to maneuver avoiding collisions, navigating corners, stopping at traffic lights, etc. The high-level controls for each vehicle allow us to define each agent's behavior in a more abstract form controlling their sequence of actions (e.g., turn left at the next intersection, following that merge into the left lane etc.), their speed changes in different legs of the journey, their stopping distance behind other vehicles etc.
-Furthermore, our simulation can be used to introduce confounders to the environment such as the time of day and the weather conditions, which can be set both changing the visual appearance of the scene but also enabling causal relationships to be introduced (for example between vehicle speed or stopping distance and the amount of water on the roads). Also, traffic lights can be controlled at a low (the timing of each individual light) and high (transition timings for all the lights) levels.  All these present opportunities for future work on causal reasoning.
-  </div>
-  
-  <br> <hr>
-  
-   <center>
-    <h1>Other Applications or Use Cases for CausalCity</h1>
-  </center>
-  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-    Counterfactuals - Being a simulation CausalCity could be used for developing and testing methods for counterfactual reasoning.  A scenario can be replicated several times with different interventions to create "ground-truth" data for a "What would have happened if...?" question.
-    <p>
-   <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-    Many Types of Causal Connections - In our intial work we limited our analyses to one "type" of causal connection (leader-follower). However, our environment allows the user to control the actions of every vehicle easily at a high-level and there are many other types of causal connection that could be introduced.  For example, linking the action of one vehicle at a specific point in the scenario to the action of another vehicle - or linking the action of vehicles to the time of day or weather.
-
-  </div>
-  
-  <br>
 
 </body>
 
