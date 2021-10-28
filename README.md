@@ -1,4 +1,4 @@
-# CausalCity: Complex Simulations with Agency for Causal Discovery and Reasoning
+# ROAR: A Large-Scale Analysis on Robustness in Action Recognition
 
-This is the official code repository to accompany the paper "CausalCity: Complex Simulations with Agency for Causal Discovery and Reasoning".
-Here we provide python code for generating and logging scenarios using the simulation environment as well as links to the baseline code used for running our experiments.
+This is the official code repository to accompany the paper "ROAR: A Large-Scale Analysis on Robustness in Action Recognition".
+Here we provide the datasets as well as links to the baseline code used for running our experiments.
