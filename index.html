@@ -82,7 +82,7 @@
   <br>
 
   <center>
-    <h1>Abstract</h1>
+    <h2>Abstract</h2>
   </center>
   <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
   We  have  seen  a  great  progress  in  video  action  recognition  in  recent  years.    There  are  several  models  based on convolutional neural network (CNN) with some recent transformer based approaches which provide state-of-the-art performance on existing benchmark datasets. However, robustnesshas not been studied for these models which is a critical aspect for real-world applications.  In this work we perform a large-scale robustness analysis of these existing models for video action recognition.  We mainly focus  on  robustness  against  distribution  shifts  due  to real-world perturbations instead  of  adversarial  perturbations. We  propose three different  benchmark  datasets, HMDB-51P, UCF-101P, and Kinetics-400P, and study the robustness of six different state-of-the-art action recognition models  against 90 different  perturbations.   The  study  reveals some interesting findings, 1)transformer based models are consistently more robust against most of the perturbations when  compared  with  CNN  based  models,  2)Pretraining helps Transformer based models to be more robust to different perturbations than CNN based models, and 3) All of the  existing  models  are robust to reversal order  of  video frames; this suggests that the current models do not utilize temporal information for prediction of action categories in videos.  We hope that this study will serve as a benchmark for future research in robust video action recognition. 
@@ -91,42 +91,43 @@
   <br>
 <hr> <br>
   <center>
-    <h1>Sample perturbations</h1>
+    <h2>Sample perturbations</h2>
+    Severity increasing from left to right.
   </center>
   <table align=center width=800px>
     <center>
-      <img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_1.gif" width=150px />
-      <img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_2.gif" width=150px />
-      <img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_3.gif" width=150px />
-      <img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_4.gif" width=150px />
-      <img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_5.gif" width=150px />
-    </center><br>
-    <center>Translation </center>
+      <center><img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_1.gif" width=150px /></center>
+      <center><img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_2.gif" width=150px /></center>
+      <center><img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_3.gif" width=150px /></center>
+      <center><img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_4.gif" width=150px /></center>
+      <center><img src="./images/hmdb-51p/Vor_dem_Treffen_Merkel_shake_hands_f_cm_np2_fr_med_1_translate_5.gif" width=150px /></center>
+    </center>
+    <center>Translation </center><br>
     <center>
       <img src="./images/kinetics-400p/--yCUKj4Oq4_000018_000028_random_rotate_1.gif" width=150px />
       <img src="./images/kinetics-400p/--yCUKj4Oq4_000018_000028_random_rotate_2.gif" width=150px />
       <img src="./images/kinetics-400p/--yCUKj4Oq4_000018_000028_random_rotate_3.gif" width=150px />
       <img src="./images/kinetics-400p/--yCUKj4Oq4_000018_000028_random_rotate_4.gif" width=150px />
       <img src="./images/kinetics-400p/--yCUKj4Oq4_000018_000028_random_rotate_5.gif" width=150px />      
-    </center><br>
-    <center>Random rotation</center>
+    </center>
+    <center>Random rotation</center><br>
     <center>
       <img src="./images/ucf-101p/v_ApplyEyeMakeup_g04_c03_motion_1.gif" width=150px />
       <img src="./images/ucf-101p/v_ApplyEyeMakeup_g04_c03_motion_2.gif" width=150px />
       <img src="./images/ucf-101p/v_ApplyEyeMakeup_g04_c03_motion_3.gif" width=150px />
       <img src="./images/ucf-101p/v_ApplyEyeMakeup_g04_c03_motion_4.gif" width=150px />
       <img src="./images/ucf-101p/v_ApplyEyeMakeup_g04_c03_motion_5.gif" width=150px />        
-    </center><br>
-    <center>Motion blur</center>
+    </center>
+    <center>Motion blur</center><br>
     
   </table>
   <br><br> <hr><br>
   <center>
-    <h1>Model robustness</h1>
+    <h2>Robustness analysis</h2>
   </center>
   <table align=center width=800px>
     <center><img src="./images/teaser.png" width=600px /></center><br>
-    <center>Robustness of different models on UCF-101P benchmark dataset. </center>
+    <center>A performance and robustness visualization of action recognition models on UCF-101P. y-axis: relative robustness $\gamma^r$ (lower is better), x-axis: accuracy on clean videos,  P indicates pre-training, and the size of circle indicates FLOPs. Transformer based models, such as MViT, not only performs better than CNN counterparts but are more robust against distribution shifts. However, without pre-training its robustness drops significantly.</center>
   </table>
 
  
