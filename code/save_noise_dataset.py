@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-# im
 import skimage
 import os
 import random

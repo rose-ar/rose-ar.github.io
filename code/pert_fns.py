@@ -1,4 +1,5 @@
 from torch.utils.data import Dataset, DataLoader
+
 import numpy as np
 import os
 import random
@@ -7,6 +8,7 @@ import cv2
 import torch
 import torch
 from torch.autograd import Variable
+
 import json
 import skimage
 # from skimage.transform import resize

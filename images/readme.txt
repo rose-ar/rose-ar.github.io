@@ -1,1 +1,1 @@
-images for the website
+images for the website.
