@@ -85,7 +85,28 @@
     <h2>Abstract</h2>
   </center>
   <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-  We  have  seen  a  great  progress  in  video  action  recognition  in  recent  years.    There  are  several  models  based on convolutional neural network (CNN) with some recent transformer based approaches which provide state-of-the-art performance on existing benchmark datasets. However, robustnesshas not been studied for these models which is a critical aspect for real-world applications.  In this work we perform a large-scale robustness analysis of these existing models for video action recognition.  We mainly focus  on  robustness  against  distribution  shifts  due  to real-world perturbations instead  of  adversarial  perturbations. We  propose three different  benchmark  datasets, HMDB-51P, UCF-101P, and Kinetics-400P, and study the robustness of six different state-of-the-art action recognition models  against 90 different  perturbations.   The  study  reveals some interesting findings, 1)transformer based models are consistently more robust against most of the perturbations when  compared  with  CNN  based  models,  2)Pretraining helps Transformer based models to be more robust to different perturbations than CNN based models, and 3) All of the  existing  models  are robust to reversal order  of  video frames; this suggests that the current models do not utilize temporal information for prediction of action categories in videos.  We hope that this study will serve as a benchmark for future research in robust video action recognition. 
+  We have seen a great progress in video action recognition
+in recent years. There are several models based on convolutional neural
+network (CNN) with some recent transformer based approaches which
+provide state-of-the-art performance on existing benchmark datasets.
+However, robustness has not been studied for these models which is
+a critical aspect for real-world applications. In this work we perform
+a large-scale robustness analysis of these existing models for video
+action recognition. We mainly focus on robustness against distribution
+shifts due to real-world perturbations instead of adversarial pertur-
+bations. We propose four different benchmark datasets, HMDB-51P,
+UCF-101P, Kinetics-400P, and SSv2P and study the robustness of
+six different state-of-the-art action recognition models against 90 differ-
+ent perturbations. The study reveals some interesting findings, 1) trans-
+former based models are consistently more robust against most of the
+perturbations when compared with CNN based models, 2) Pretraining
+helps Transformer based models to be more robust to different pertur-
+bations than CNN based models, and 3) All of the studied models are
+robust to temporal perturbation on the Kinetics dataset, but not
+on SSv2; this suggests temporal information is much more important for
+action label prediction on SSv2 datasets than on the Kinetics dataset.
+We hope that this study will serve as a benchmark for future research in
+robust video action recognition.
   </div>
    <br>
   <br>
